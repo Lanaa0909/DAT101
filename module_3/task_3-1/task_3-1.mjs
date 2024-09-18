@@ -9,6 +9,9 @@ let wakeUpTime = 2;
 if ("Replace this") {
   printOut("I can take the bus to school.");
 }
+
+// en kommentar
+const o = 0;
 printOut(newLine);
 
 printOut("--- Part 4, 5 --------------------------------------------------------------------------------------------");
