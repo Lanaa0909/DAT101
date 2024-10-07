@@ -75,6 +75,8 @@ printOut("Seconds = " + part4_Seconds);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
+printOut("HELLO");
+
 printOut("Replace this with you answer!");
 printOut(newLine);
 

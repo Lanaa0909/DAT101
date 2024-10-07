@@ -83,20 +83,20 @@ The answer must be in whole "Kroner" and whole "dollars".
 */
 
 //Given Data
-const usdAmount = 54;
-exchangeRateNOKtoUSD = 8.6 / 76; // 1NOK in USD
-exchangeRateUSDtoNOK = 76 / 8.6; //1 USD in NOK
+ const usdAmount = 54;
+ exchangeRateNOKtoUSD = 8.6 / 76; // 1NOK in USD
+ exchangeRateUSDtoNOK = 76 / 8.6; //1 USD in NOK
 
 // Convert USD to NOK
-const nokAmount = Math.floor(usdAmount * exchangeRateUSDtoNOK);
+ const nokAmount = Math.floor(usdAmount * exchangeRateUSDtoNOK);
+ 
+ // Convert NOK to USD
+ const usdConvertedBack = Math.floor(nokAmount * exchangeRateNOKtoUSD);
+ 
+ printOut(" USD to NOK = " + nokAmount + " NOK" );
+ printOut("NOK to USD = " + usdConvertedBack + " USD");
+ 
 
-// Convert NOK to USD
-const usdConvertedBack = Math.floor(nokAmount * exchangeRateNOKtoUSD);
-
-printOut(" USD to NOK = " + nokAmount + " NOK" );
-printOut("NOK to USD = " + usdConvertedBack + " USD");
-
-printOut("HELLO");
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
