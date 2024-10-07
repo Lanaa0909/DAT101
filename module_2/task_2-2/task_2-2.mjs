@@ -13,8 +13,10 @@ printOut("--- Part 2 -----------------------------------------------------------
 /* Convert 25 metres and 34 centimeters to inches. An inch is 25.4 millimeters (maximum 2 decimal places in
 the answer).*/
 
+//Given Data
 const meter = 25;
 const centimeter = 34;
+
 const totalMillimeter = meter * 1000 + centimeter * 10;
 const inch = totalMillimeter / 25.4;
 
@@ -24,6 +26,7 @@ printOut("--- Part 3 -----------------------------------------------------------
 /* Convert 3 days, 12 hours, 14 minutes, and 45 seconds to minutes. (Not allowed to use date objects). The
 task must be solved with primitives.*/
 
+//Given Data
 const days = 3;
 const hours = 12;
 const minutes = 14;
@@ -74,9 +77,26 @@ const part4_Seconds = Math.floor(part4_Calc * 60);
 printOut("Seconds = " + part4_Seconds);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
-printOut("Replace this with you answer!");
-printOut(newLine);
+/*Convert 54 dollars to Norwegian kroner, and print the price for both:NOK → USD and USD → NOK.
+Use 76 NOK = 8.6 USD as the exchange rate.
+The answer must be in whole "Kroner" and whole "dollars".
+*/
+
+//Given Data
+const usdAmount = 54;
+exchangeRateNOKtoUSD = 8.6 / 76; // 1NOK in USD
+exchangeRateUSDtoNOK = 76 / 8.6; //1 USD in NOK
+
+// Convert USD to NOK
+const nokAmount = Math.floor(usdAmount * exchangeRateUSDtoNOK);
+
+// Convert NOK to USD
+const usdConvertedBack = Math.floor(nokAmount * exchangeRateNOKtoUSD);
+
+printOut(" USD to NOK = " + nokAmount + " NOK" );
+printOut("NOK to USD = " + usdConvertedBack + " USD");
+
+printOut("HELLO");
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
