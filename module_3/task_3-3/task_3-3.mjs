@@ -3,7 +3,6 @@ import { initPrintOut, printOut, newLine } from "../../common/script/utils.mjs";
 initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 
 function printTodaysDate() {
@@ -22,7 +21,6 @@ printTodaysDate();
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function getTodaysDateAndCountdown() {
     const today = new Date();
@@ -45,7 +43,6 @@ getTodaysDateAndCountdown();
 printOut(newLine);
 
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function circleCalculations(radius) {
     const diameter = 2 * radius;
@@ -57,12 +54,11 @@ function circleCalculations(radius) {
     printOut(`Area: ${area.toFixed(2)}`);
 }
 
-circleCalculations(5); // Replace 5 with any radius value you want
+circleCalculations(5);
 
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function rectangleCalculations({ width, height }) {
     const circumference = 2 * (width + height);
@@ -78,7 +74,6 @@ rectangleCalculations({ width: 10, height: 5 });
 printOut(newLine);
 
 printOut("--- Part 5 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function temperatureConversion(temp, type) {
     let celsius, fahrenheit, kelvin;
@@ -113,7 +108,6 @@ temperatureConversion(300, 'Kelvin');
 printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function priceWithoutVAT(gross, vatGroup) {
     const vatRates = {
@@ -138,24 +132,23 @@ function priceWithoutVAT(gross, vatGroup) {
 priceWithoutVAT(125, 'normal');
 priceWithoutVAT(100, 'food');
 priceWithoutVAT(110, 'hotel');
-priceWithoutVAT(150, 'goblins'); // Unknown VAT group example
+priceWithoutVAT(150, 'goblins');
 
 
 printOut(newLine);
 
 printOut("--- Part 7 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function calculateSpeedDistanceTime(distance, time, speed) {
     let result;
     if (speed === undefined && distance !== undefined && time !== undefined) {
-        result = distance / time; // Calculate speed
+        result = distance / time;
         printOut(`Calculated Speed: ${result} units/time`);
     } else if (time === undefined && distance !== undefined && speed !== undefined) {
-        result = distance / speed; // Calculate time
+        result = distance / speed;
         printOut(`Calculated Time: ${result} time units`);
     } else if (distance === undefined && speed !== undefined && time !== undefined) {
-        result = speed * time; // Calculate distance
+        result = speed * time;
         printOut(`Calculated Distance: ${result} units`);
     } else {
         printOut("Error: Please provide exactly two values to calculate the third.");
@@ -164,15 +157,13 @@ function calculateSpeedDistanceTime(distance, time, speed) {
     return result;
 }
 
-// Test cases for Task 7
-calculateSpeedDistanceTime(100, 2, undefined); // Should calculate speed
-calculateSpeedDistanceTime(undefined, 2, 50); // Should calculate distance
-calculateSpeedDistanceTime(100, undefined, 50); // Should calculate time
+calculateSpeedDistanceTime(100, 2, undefined);
+calculateSpeedDistanceTime(undefined, 2, 50);
+calculateSpeedDistanceTime(100, undefined, 50);
 
 printOut(newLine);
 
 printOut("--- Part 8 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function modifyTextString(text, maxSize, character, insertAtEnd) {
     while (text.length < maxSize) {
@@ -182,59 +173,57 @@ function modifyTextString(text, maxSize, character, insertAtEnd) {
     return text;
 }
 
-modifyTextString("Hello", 10, "*", true); // Add "*" at the end
-modifyTextString("World", 10, "-", false); // Add "-" at the beginning
+modifyTextString("Hello", 10, "*", true);
+modifyTextString("World", 10, "-", false);
 
 
 printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function printNumberBlock() {
     let currentNumber = 1;
-    const totalLines = 7; // Number of lines to match the provided output format
+    const totalLines = 7;
 
     for (let line = 0; line < totalLines; line++) {
         const leftSide = [];
         const rightSide = [];
 
-        // Populate left side with 3 numbers
+        
         for (let i = 0; i < 3; i++) {
             leftSide.push(currentNumber);
             currentNumber++;
         }
 
-        // Skip numbers to create space between left and right sides
+       
         currentNumber += 3;
 
-        // Populate right side with 3 numbers
+        
         for (let i = 0; i < 3; i++) {
             rightSide.push(currentNumber);
             currentNumber++;
         }
 
-        // Print the formatted line
+       
         printOut(`${leftSide.join(' ')} = ${rightSide.join(' ')}`);
     }
 
     printOut("Mathematics is fun!");
 }
 
-// Run the function
+
 printNumberBlock();
 printOut(newLine);
 
 /* Task 10*/
 printOut("--- Part 10 ---------------------------------------------------------------------------------------------");
-/* Put your code below here!*/
 //
 function factorial(n) {
     if (n <= 1) return 1;
     return n * factorial(n - 1);
 }
 
-// Print results for factorial calculations
+
 printOut(`Factorial of 9: ${factorial(9)}`);
 printOut(`Factorial of 6: ${factorial(6)}`);
 printOut(newLine);

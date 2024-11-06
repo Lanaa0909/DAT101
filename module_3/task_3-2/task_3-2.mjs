@@ -6,7 +6,7 @@ printOut("--- Part 1 -----------------------------------------------------------
 printOut(newLine);
 //Use "for" loops to generate two lines on the HTML page. One should count from 1 to 10, and the other should count from 10 to 1. Use only two lines to print the rows.
 
-let countUp = '';//ikke bruk const her
+let countUp = '';
 for (let i = 1; i <= 10; i++) {
   countUp += i + ' ';
 }
@@ -118,7 +118,6 @@ function getGrade(score) {
   
   let grades = []; 
   
-  // Generate 5 random grades
   for (let i = 0; i < 5; i++) {
     let score = Math.floor(Math.random() * 236) + 1;
     let grade = getGrade(score);
@@ -155,7 +154,7 @@ function rollDice() {
     return Math.floor(Math.random() * 6) + 1;
   }
   
-  // Vi skal ha Full straight (1-6)
+  
   let straightRolls = 0;
   let straightSet = new Set();
   while (straightSet.size < 6) {
@@ -165,7 +164,7 @@ function rollDice() {
   printOut
   (`Full Straight achieved in ${straightRolls} rolls<br>`);
   
-  // Her er det 3 pairs
+  
   let pairRolls = 0;
   let pairCounts;
   do {
@@ -178,7 +177,7 @@ function rollDice() {
   printOut
   (`3 Pairs achieved in ${pairRolls} rolls<br>`);
   
-  // 2 of a kind og 4 of a kind (tower)
+  
   let towerRolls = 0;
   let towerCounts;
   do {
