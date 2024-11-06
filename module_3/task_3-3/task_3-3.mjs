@@ -21,7 +21,7 @@ printTodaysDate();
 printOut(newLine);
 
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
-//
+// 
 function getTodaysDateAndCountdown() {
     const today = new Date();
     const norwegianDate = today.toLocaleDateString('no-NB', {
