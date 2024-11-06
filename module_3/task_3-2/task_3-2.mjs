@@ -4,7 +4,7 @@ initPrintOut(document.getElementById("txtOut"));
 
 printOut("--- Part 1 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-//hello7
+//hello766
 printOut("Replace this with you answer!");
 printOut(newLine);
 
