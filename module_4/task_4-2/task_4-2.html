@@ -10,8 +10,22 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[What is an array? A short and concise answer is expected here!]</li>
+      <p>[An array is like a list or a container that holds multiple items, such as numbers or strings, in a specific order. Each item in an array can be accessed using an index, which tells you its position in the list.]</p>
+      <li>[What does it mean to "hardcode" when we talk about programming?]</li>
+      <p>[Hardcoding means writing specific values directly into the code, instead of making them flexible or dynamic. For example, if you write const x = 5; instead of getting x from user input or a database, that’s hardcoding.]</p>
+      <li>[Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we (humans) don't "know" how long the array is]</li>
+      <p>[In task 3, we’re given a sentence, and we split it into an array of words. To go through the array, we use a loop, and even if we don’t know how many words there are, we can check the array’s length. This way, we can loop through each word without worrying about the exact size beforehand]</p>
+      <li>[Why is it beneficial to store instances of a class in arrays, as in task 4?]</li>
+      <p>[Storing class instances in an array lets us organize objects in a collection, so we can easily manage, access, and loop through them. If we want to do something with each object, like print its details, we can quickly go through all of them in the array using a loop.]</p>
+      <li>[Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and "Thursday", how would it ideally look?]</li>
+      <p>[The EWeekDays object stores days of the week and groups them into categories like workdays and weekends, with a "value" attribute representing each day with a specific number. For example, Monday has a value of 0x01 and Friday has 0x10. This helps to combine days easily. WeekDay represents individual days, Workdays is a group of weekdays, and Weekends is another group of non-working days. ]</p>
+      <li>[In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works]</li>
+      <p>[A callback is a function that we pass to another function to be executed later. In sorting, we use a callback function to decide how two items in the array should be compared. For example, it checks if one number is smaller than another to decide their order.]</p>
+      <li>[What happens in the sorting routines you have created? Try to explain how the array can figure out if an element should come before or after another. The best way to answer this is to actually print both parameters each time the sorting routine runs.]</li>
+      <p>[In the sorting function, two elements are compared at a time using a callback. If the first element is less than the second, it comes first. If it’s greater, it comes after. The sorting function swaps them around based on the result of the comparison. Printing the two parameters helps us understand how they are compared at each step.]</p>
+      <li>[In task 10, we will create an array with rows and columns. Explain what the first element of the array contains.]</li>
+      <p>[The first element of the array is the first row of our 2D array. It contains the first set of values, which are the text labels showing the row and column positions. For example, if the array is 5x9, the first element would be the first row, with 9 items in it, like "Row 1, Column 1", "Row 1, Column 2", etc.]</p>
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
