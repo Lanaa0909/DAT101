@@ -351,7 +351,7 @@ accounts.deposit(12.00, "USD");
 accounts.withdraw(10.00, "GBP");
 accounts.setCurrencyType("CAD");
 accounts.setCurrencyType("INR");
-accounts.withdraw(150.11, "SEK");
+accounts.withdraw(150.11, "SEK"); 
 
 //printOut("Replace this with you answer!");
 printOut(newLine);
