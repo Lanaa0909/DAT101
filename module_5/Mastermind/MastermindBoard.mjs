@@ -1,5 +1,5 @@
 "use strict";
-
+// 
 // prettier-ignore
 const MastermindBoard = {
   ButtonNewGame:        {x: 275, y:  5},
