@@ -42,22 +42,22 @@ printOut("--- Part 3 -----------------------------------------------------------
 printOut(newLine);
 //Take the program from part 2 and expand it to guess a number between 1 and one million. Print the number of guesses as well as the number of milliseconds it took to guess the number. HINT: Use the Date.now() function to measure time
 
-let target1 = Math.floor(Math.random() * 1000000) + 1;
-let guess1 = 0;
-let attempts1 = 0;
+target = Math.floor(Math.random() * 1000000) + 1;
+guess = 0; //Hvis du skriver let her så vil det ikke fungere
+attempts = 0;
 
 let startTime = Date.now();
 
-while (guess1 !== target1) {
-  guess1 = Math.floor(Math.random() * 1000000) + 1;
-  attempts1++;
+while (guess !== target) {
+  guess = Math.floor(Math.random() * 1000000) + 1;
+  attempts++;
 }
 
 let endTime = Date.now();
 let timeTaken = endTime - startTime;
 
-printOut(`Correct guess: ${guess1} in ${attempts1} attempts<br>`);
-printOut(`Time taken: ${timeTaken} milliseconds<br>`);
+printOut(`Correct guess: ${guess} in ${attempts} attempts<br>`);
+printOut("Time taken: " + timeTaken + " milliseconds<br>"); //skrive  + tegn isteden for $ tegn for å  skrive det enklere
 printOut(newLine);
 
 printOut("--- Part 4 ----------------------------------------------------------------------------------------------");
