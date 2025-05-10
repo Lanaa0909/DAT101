@@ -58,10 +58,9 @@ export function playSound(aSound) {
     aSound.pause();
   }
 }
-
-//Function to stop and reset the sound
-export function stopResetSound(aSound){
-  console.log("Stopping reset sound");
+//function to stop and reset the sound
+export function stopResetSound(aSound) {
+  aSound.stop();
 }
 
 function loadGame() {
@@ -81,8 +80,9 @@ function loadGame() {
 
   //Load sounds
   GameProps.sounds.running = new libSound.TSoundFile("./Media/running.mp3");
-
-  setDayNight();
+  GameProps.sounds.flap = new libSound.TSoundFile("./Media/flap.mp3");
+  GameProps.sounds.food = new libSound.TSoundFile("./Media/food.mp3");
+  GameProps.sounds.hitObstacle = new libSound.TSoundFile("./Media/hitObstacle.mp3");
 
   requestAnimationFrame(drawGame);
   setInterval(animateGame, 10);
@@ -161,8 +161,8 @@ function animateGame() {
       if (delBaitIndex >= 0) {
         stopResetSound(GameProps.sounds.food);
         playSound(GameProps.sounds.food);
-
         GameProps.baits.splice(delBaitIndex, 1);
+
         GameProps.menu.incScore(10);
       }
       break;
@@ -204,7 +204,7 @@ export function startGame() {
   spawnObstacle();
   spawnBait();
   //Play the running sound
- playSound(GameProps.sounds.running);
+  playSound(GameProps.sounds.running);
 }
 
 //--------------- Event Handlers -----------------------------------------//
@@ -219,17 +219,27 @@ function setSoundOnOff() {
   }
 } // end of setSoundOnOff
 
-function setDayNight() {
-  const selected = [...rbDayNight].find(r => r.checked);
-  if (selected && selected.value === "1") {
+export function setDayNight() {
+  if (rbDayNight[0].checked) {
+    GameProps.background.index = 0;
+    
+    GameProps.obstacles.forEach(obstacle => {
+      obstacle.updateIndex(3, 2); 
+    });
+
     GameProps.dayTime = true;
-    console.log("Day time valgt");
+    console.log("Day time");
   } else {
     GameProps.dayTime = false;
-    console.log("Night time valgt");
+    GameProps.background.index = 1;
+    
+    GameProps.obstacles.forEach(obstacle => {
+      obstacle.updateIndex(1, 0);
+    });
+    
+    console.log("Night time");
   }
-}
-// end of setDayNight
+} // end of setDayNight
 
 function onKeyDown(aEvent) {
   switch (aEvent.code) {

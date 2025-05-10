@@ -60,9 +60,10 @@ export class TMenu {
     this.#posScore = new lib2d.TPosition(383, 181);
     this.#posBestScore = new lib2d.TPosition(383, 225);
     this.#posPlayScore = new lib2d.TPosition(75, 50);
-    GameProps.sounds.countDown = new libSound.TSoundFile ("./Media/countDown.mp3");
+    GameProps.sounds.countDown = new libSound.TSoundFile("./Media/countDown.mp3");
+    GameProps.sounds.gameOver = new libSound.TSoundFile("./Media/gameOver.mp3");
+    
   }
-
   draw() {
     switch (GameProps.status) {
       case EGameStatus.idle:
@@ -146,6 +147,7 @@ export class TMenu {
     if (this.#spNumber.index > 1) {
       this.#spNumber.index--;
       setTimeout(this.#onCountDown, 1000);
+      
     } else {
       startGame();
     }
