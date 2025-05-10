@@ -54,3 +54,4 @@ class THero extends libSprite.TSprite {
 }
 
 export default THero;
+//
